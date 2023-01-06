@@ -1,6 +1,5 @@
 /*===== GOOGLE FONTS =====*/
-@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 /* Variables */
 :root{
@@ -17,8 +16,7 @@
   --color-off-white: #E1EDBD;
 
   /* Font and typography */
-  --body-font: 'Source Sans Pro';
-  /* --body-font: 'Roboto Slab', serif; */
+  --body-font: 'Roboto Slab', serif; 
   --normal-font-size: 1rem;
 
   /* z index */
