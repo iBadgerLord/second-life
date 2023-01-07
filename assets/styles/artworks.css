@@ -216,9 +216,20 @@
     border-radius: 3px 3px 3px 3px;
     opacity: 0;
     transition: .5s ease;  
+    padding: 1rem;
   }
   .artwork-container:hover .artwork-overlay {
     opacity: 1;
+  }
+  .artwork-overlay-container {
+  }
+  .aw-title {
+    font-size: 2.4rem;
+    color: var(--color-one);
+  }
+  .aw-general {
+    font-size: 1.2rem;
+    color: var(--color-one);
   }
   
   /*=== Home Page Additional Section ===*/
