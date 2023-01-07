@@ -3,7 +3,6 @@
     display: grid;
     grid-gap: 20px;
     grid-template-areas:
-      'pi pi pi pi'
       'aw-1-1 aw-1-2 aw-1-3 aw-1-4'
       'aw-1-5 aw-1-6 aw-1-7 aw-1-8'
       'aw-1-9 aw-1-10 aw-1-11 aw-1-12'
@@ -11,14 +10,8 @@
     grid-auto-columns: minmax(0, 1fr);
     grid-auto-flow: column;    
   }
-
-
   
   /*=== Home Page Boxes Section ===*/
-  #pi {
-    grid-area: pi;
-    height: 50px;
-  }
   /* Individual Artworks */
   #aw-1-1 {
     grid-area: aw-1-1;
@@ -180,18 +173,12 @@
     background-position: center;
   }
 
-  /* General Article Values */
+  /* General Artwork Values */
   .relative {
     position: relative;
   }
   .absolute {
     position: absolute;
-  }
-
-  /* Artworks */
-  .page-indicator {
-    border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
   }
   .artwork {
     border-radius: 3px 3px 3px 3px;
@@ -209,95 +196,29 @@
     width: 100%;
     border-radius: 3px 3px 3px 3px;
   }
-
-  .artwork img {
-    width:100%;
+  .artwork-container {
+    position: relative;
     height: 100%;
-  }
-  
-  /* Large Article */
-  .article-large {
+    width: 100%;
     border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
   }
-
-  .large {
+  .artwork-underlay {
+    position: absolute;
     height: 100%;
     width: 100%;
-  }
-  .article-img {
-    background-size: cover;
-    background-position: center;
-  
-    position: relative;
-    height: 80%;
-    width: 100%;
-    border-radius: 3px 3px 0 0;
-  }
-  .article-text {
-    padding: 0.8rem;
-    position: relative;
-    height: 20%;
-    width: 100%;
-    background-color: #5a5a5a;
-    border-radius: 0 0 3px 3px;
-  }
-  .title-text {
-    color: #fff;
-    align-items: center;
-  }
-  .title {
-    font-size: clamp(1.4rem, 2vw, 8rem);
-    margin-bottom: clamp(5px, 1vw, 10px);
-  }
-  .subtitle {
-    font-size: clamp(0.75rem, 1vw, 1rem);
-  }
-  
-  /* Medium Article */
-  .article-medium {
     border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
   }
-  .medium {
+  .artwork-overlay {
+    position: absolute;
     height: 100%;
     width: 100%;
-  }
-  .article-filler {
-    position: relative;
-    height: 60%;
-    width: 100%;
-    border-radius: 3px 3px 0 0;
-  }
-  .article-blend{
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    position: relative;
-    height: 20%;
-    width: 100%;
-  }
-  .article-shadow {
-    padding: 0.8rem;
-    position: relative;
-    height: 20%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0 0 3px 3px;
-  }
-  .medium-title {
-    font-size: clamp(0.6rem, 1.1vw, 1rem);
-  }
-  
-  /* Small Article */
-  .article-small {
+    background-color: var(--color-off-white);
     border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: .5s ease;  
   }
-  .small {
-    height: 100%;
-    width: 100%;
-  }
-  .small-title {
-    font-size: clamp(0.6rem, 1.1vw, 1rem);
+  .artwork-container:hover .artwork-overlay {
+    opacity: 1;
   }
   
   /*=== Home Page Additional Section ===*/
@@ -305,7 +226,6 @@
   @media (max-width: 1351px) {
     .index-main {
       grid-template-areas:
-      'pi pi'
       'aw-1-1 aw-1-2'
       'aw-1-3 aw-1-4'
       'aw-1-5 aw-1-6'
@@ -319,7 +239,6 @@
   @media (max-width: 768px) {
     .index-main {
       grid-template-areas:
-      'pi pi'
       'aw-1-1 aw-1-2'
       'aw-1-3 aw-1-4'
       'aw-1-5 aw-1-6'
@@ -333,7 +252,6 @@
   @media (max-width: 584px) {
     .index-main {
       grid-template-areas:
-      'pi'
       'aw-1-1'
       'aw-1-2'
       'aw-1-3'
